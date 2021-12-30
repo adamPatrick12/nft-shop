@@ -63,6 +63,7 @@
 .header{
   width: 60%;
   min-height: 10vh;
+ 
   border-radius: 2rem;
   display: flex;
   align-items: center;
@@ -91,4 +92,68 @@
   width: 12rem;
   height: 12rem;
   margin-top: 1rem;
+}
+
+.pageInfo{
+  height: 30rem;
+  width: 35rem;
+  
+  margin-top: 1.5rem;
+  margin-left: 3rem;
+}
+
+.infoBox1{
+  height: 10rem;
+  width: 30rem;
+ 
+  margin-left: 2rem;
+  font-size: large;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+h2{
+  font-family: 'Poppins', sans-serif;
+  color: #5583c0;
+  font-weight: 900;
+  font-size: 2rem;
+  opacity: 0.8;
+}
+
+.infoBox2{
+  height: 10rem;
+  width: 25rem;
+ 
+  margin-left: 2.5rem;
+  font-size: large;
+}
+
+h3{
+  font-family: 'Poppins', sans-serif;
+  color: White;
+  font-weight: 200;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.shopBtn{
+  margin-top: 2.5rem;
+  border-radius: 3px;
+  background: linear-gradient(to right bottom, rgba(60, 106, 233, 0.7),  rgba(255,255,255,0.3));
+  border: transparent;
+  color: white;
+  width: 6rem;
+  height: 2rem;
+  font-weight: 300;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+.shopBtn:hover{
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  -ms-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  border: 1px white solid;
 }
