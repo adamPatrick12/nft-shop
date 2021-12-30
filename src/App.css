@@ -38,6 +38,9 @@
   border-radius: 2rem;
   z-index: 2;
   backdrop-filter: blur(2rem);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .circle1, .circle2{
@@ -51,7 +54,7 @@
 }
 
 .circle1{
- top: 5%;
+ top: 3%;
  right: 10%
 }
 
@@ -68,6 +71,11 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+.logoDiv{
+  text-align: center;
+  border: red 1px solid;
 }
 
 .menuBtn{
@@ -89,26 +97,30 @@
 }
 
 .logo{
-  width: 12rem;
-  height: 12rem;
-  margin-top: 1rem;
+  width: 15rem;
+  height: 15rem;
+  margin-top: -1rem;
+  margin-bottom: -5.5rem;
+}
+
+h1{
+  font-family: 'Poppins', sans-serif;
+  color: white;
 }
 
 .pageInfo{
-  height: 30rem;
-  width: 35rem;
+  height: 40rem;
+  width: 50rem;
   
   margin-top: 1.5rem;
-  margin-left: 3rem;
+  margin-left: 7.3rem;
 }
 
 .infoBox1{
-  height: 10rem;
-  width: 30rem;
- 
-  margin-left: 2rem;
+  height: 17rem;
+  width: 45rem;
+  
   font-size: large;
-  margin: auto;
   margin-top: 1rem;
 }
 
@@ -116,15 +128,16 @@ h2{
   font-family: 'Poppins', sans-serif;
   color: #5583c0;
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 3.5rem;
   opacity: 0.8;
 }
 
 .infoBox2{
   height: 10rem;
-  width: 25rem;
- 
-  margin-left: 2.5rem;
+  width: 40rem;
+  margin-top: 3rem;
+  
+  margin-left: .2rem;
   font-size: large;
 }
 
@@ -132,21 +145,21 @@ h3{
   font-family: 'Poppins', sans-serif;
   color: White;
   font-weight: 200;
-  font-size: 1rem;
+  font-size: 1.6rem;
   opacity: 0.8;
 }
 
 .shopBtn{
-  margin-top: 2.5rem;
-  border-radius: 3px;
+  margin-top: 5.5rem;
+  border-radius: 1rem;
   background: linear-gradient(to right bottom, rgba(60, 106, 233, 0.7),  rgba(255,255,255,0.3));
   border: transparent;
   color: white;
-  width: 6rem;
-  height: 2rem;
+  width: 14rem;
+  height: 3rem;
   font-weight: 300;
   font-family: 'Poppins', sans-serif;
-  
+  font-size: 2rem;
 }
 
 .shopBtn:hover{
@@ -154,6 +167,179 @@ h3{
   -moz-transition: all 1s ease-out;
   -o-transition: all 1s ease-out;
   -ms-transition: all 1s ease-out;
-  transition: all 1s ease-out;
+  transition: all 1s ease-out;   
   border: 1px white solid;
+}
+
+.nftCard{
+height: 30rem;
+width: 22rem;
+
+position: absolute;
+left: 620%;
+border-radius: 2rem;
+display: flex;
+justify-content: center;
+background: linear-gradient(to right bottom, 
+rgba(255,255,255,0.7),  rgba(255,255,255,0.3));
+box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.icon {
+  position: absolute;
+  left: 600%;
+  overflow: hidden;
+  width: 22rem;
+  height: 30rem;
+  display: inline-block;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  margin: 25px 0 25px 25px;
+  border-radius: 2rem;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  font-size: 12px;
+  font-family: sans-serif;
+}
+
+.icon:nth-child(1) { background: linear-gradient(to right bottom, 
+  rgba(212, 210, 210, 0.7),  rgba(255,255,255,0.3)); }
+/**
+ * The "shine" element
+ */
+
+.icon:after {
+  
+  animation: shine 5s ease-in-out  infinite;
+  animation-fill-mode: forwards;  
+  content: "";
+  position: absolute;
+  top: -110%;
+  left: -210%;
+  width: 200%;
+  height: 200%;
+  opacity: 0;
+  transform: rotate(30deg);
+  
+  background: rgba(255, 255, 255, 0.13);
+  background: linear-gradient(
+    to right, 
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.13) 77%,
+    rgba(255, 255, 255, 0.5) 92%,
+    rgba(255, 255, 255, 0.0) 100%
+  );
+}
+
+/* Hover state - trigger effect */
+
+
+/* Active state */
+
+.icon:active:after {
+  opacity: 0;
+}
+
+@keyframes shine{
+  10% {
+    opacity: 1;
+    top: -30%;
+    left: -30%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+  }
+  100% {
+    opacity: 0;
+    top: -30%;
+    left: -30%;
+    transition-property: left, top, opacity;
+  }
+}
+
+.nftContainer{
+  position: relative;
+  height: 10rem;
+  width: 10rem;
+  
+  left: 0%;
+  bottom: 80%;
+}
+
+.nftImg{
+  width: 21rem;
+  height: 20rem;
+  margin-top:8px;
+  border-radius: 2rem 2rem 3px 3px;
+  margin-bottom: -1rem;
+}
+
+.nftInfo{
+  width: 17rem;
+  height: 3.5em;
+  margin-left: 1rem;
+  padding: 0;
+}
+
+.nftInfo2{
+  width: 17rem;
+  height: 3rem;
+  margin-left: 1rem;
+  padding: 0;
+}
+
+h4{
+  text-align: start;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+p{
+  text-align: start;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 20px;
+  color: rgb(243, 241, 241);
+}
+
+.nftEth{
+  width: 17rem;
+  height: 2rem;
+  margin-left: 1rem;
+  padding: 0;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  filter: invert(60%) sepia(19%) saturate(1303%) 
+  hue-rotate(176deg) brightness(79%) contrast(89%);
+}
+
+.nftEth-Img{
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-top: 4px;
+}
+
+.nftEth2{
+  width: 7rem;
+  height: 2rem;
+  display: flex;
+  align-content: flex-start;
+  margin-bottom: 1rem;
+  margin-left: 2px;
+}
+
+span{
+  color: #3D3D3D;
+  text-align: start;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 0.8rem;
+  line-height: 20px;
+  padding-top: 5px;
+  margin-left: 8px;
 }
