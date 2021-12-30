@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.Home-BG{
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.Home-BG {
+  background: linear-gradient(180deg, #65dfc9, #2833ca, #6cdbeb);
+  background-size: 600% 600%;
+
+  -o-animation: AnimationName 59s ease infinite;
+  animation: AnimationName 59s ease infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@-o-keyframes AnimationName {
+  0%{background-position:0% 2%}
+  50%{background-position:100% 99%}
+  100%{background-position:0% 2%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 2%}
+  50%{background-position:100% 99%}
+  100%{background-position:0% 2%}
+}
+
+.glass{
+  background: white;
+  min-height: 85vh;
+  width: 70%;
+  background: linear-gradient(to right bottom, rgba(255,255,255,0.7),  rgba(255,255,255,0.3));
+  border-radius: 2rem;
+  z-index: 2;
+  backdrop-filter: blur(2rem);
+}
+
+.circle1, .circle2{
+  background: white;
+  background: linear-gradient(to right bottom, rgba(255,255,255,0.8),  rgba(255,255,255,0.3));
+  border-radius: 2rem;
+  height: 15rem;
+  width: 15rem;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle1{
+ top: 5%;
+ right: 10%
+}
+
+.circle2{
+  bottom: 5%;
+  left: 8%;
+}
+
+.header{
+  width: 60%;
+  min-height: 10vh;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.menuBtn{
+  font-size: 72px;
+  background: -webkit-linear-gradient(#65dfc9, #2833ca);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Poppins', sans-serif;
+  font-size: medium;
+  transition: 0.3s;
+  font-weight: 600;
+  opacity: 0.8;
+  transition: 0.3;
+}
+
+.menuBtn:hover{
+   -webkit-text-fill-color: white;
+   text-decoration: none;
+}
+
+.logo{
+  width: 12rem;
+  height: 12rem;
+  margin-top: 1rem;
 }
