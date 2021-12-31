@@ -1,0 +1,150 @@
+* { box-sizing: border-box; }
+
+
+.shop-Bg{
+    height: 200rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .shop-Bg{
+    background: linear-gradient(180deg, #65dfc9, #2833ca, #6cdbeb);
+    
+  }
+
+  .glass2{
+    background: white;
+    height: 95%;
+    width: 90%;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.7),  rgba(255,255,255,0.3));
+    border-radius: 2rem;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .circle3, .circle4{
+    background: white;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.8),  rgba(255,255,255,0.3));
+    border-radius: 2rem;
+    height: 15rem;
+    width: 15rem;
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  .circle3{
+   top: 3%;
+   right: 0%
+  }
+  
+  .circle4{
+    bottom: 5%;
+    left: 0%;
+  }
+
+  .header2{
+    width: 100%;
+    min-height: 10vh;
+    border: 1px solid red;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .storeArea{
+    width: 95%;
+    height: 80vh;
+    border: 1px solid red;
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .icon2 {
+    overflow: hidden;
+    width: 22rem;
+    height: 30rem;
+    display: inline-block;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    margin: 25px 0 65px 10px;
+    border-radius: 2rem;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    font-size: 12px;
+    font-family: sans-serif;
+  }
+  
+  .icon2:nth-child(1) { background: hsla(229, 79%, 79%, 1);
+  
+    background: linear-gradient(315deg, hsla(229, 79%, 79%, 1) 27%, hsla(186, 98%, 83%, 1) 60%);
+    
+    background: -moz-linear-gradient(315deg, hsla(229, 79%, 79%, 1) 27%, hsla(186, 98%, 83%, 1) 60%); }
+
+    .icon2:nth-child(2) { background: hsla(229, 79%, 79%, 1);
+  
+        background: linear-gradient(315deg, hsla(229, 79%, 79%, 1) 27%, hsla(186, 98%, 83%, 1) 60%);
+        
+        background: -moz-linear-gradient(315deg, hsla(229, 79%, 79%, 1) 27%, hsla(186, 98%, 83%, 1) 60%); }
+
+  /**
+   * The "shine" element
+   */
+  
+  .icon2:after {
+    
+    animation: shine 5s ease-in-out  infinite;
+    animation-fill-mode: forwards;  
+    content: "";
+    position: absolute;
+    top: -110%;
+    left: -210%;
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+    transform: rotate(30deg);
+    
+    background: rgba(255, 255, 255, 0.13);
+    background: linear-gradient(
+      to right, 
+      rgba(255, 255, 255, 0.13) 0%,
+      rgba(255, 255, 255, 0.13) 77%,
+      rgba(255, 255, 255, 0.5) 92%,
+      rgba(255, 255, 255, 0.0) 100%
+    );
+  }
+  
+  /* Hover state - trigger effect */
+  
+  
+  /* Active state */
+  
+  .icon2:active:after {
+    opacity: 0;
+  }
+  
+  @keyframes shine{
+    10% {
+      opacity: 1;
+      top: -30%;
+      left: -30%;
+      transition-property: left, top, opacity;
+      transition-duration: 0.7s, 0.7s, 0.15s;
+      transition-timing-function: ease;
+    }
+    100% {
+      opacity: 0;
+      top: -30%;
+      left: -30%;
+      transition-property: left, top, opacity;
+    }
+  }
+  

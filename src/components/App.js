@@ -44,7 +44,7 @@ function Home() {
              <h1>ClosedSea</h1>
            </div>
             <a  className='menuBtn' href="">Home</a>
-            <a  className='menuBtn' href="">Shop</a>
+           <Link to = "/items"> <a  className='menuBtn' href="">Shop</a></Link> 
             <a  className='menuBtn' href="">What are NFT's</a>
           </div>
           <div className='pageInfo'>
@@ -58,10 +58,12 @@ function Home() {
                      ClosedSea is the world's first and largest fake NFT marketplace! Why buy NFTs with your hard earned cash when, you can just screenshot them!  
                  </h3>
                 
+                <Link to= "/items">
                 <motion.button 
                 className='shopBtn' 
                 whileHover={{ scale: 1.1 }}
                 >Shop NFTs</motion.button>
+                </Link>
 
               </div>
               <div className = "nftContainer" >

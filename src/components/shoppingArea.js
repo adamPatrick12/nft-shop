@@ -1,9 +1,75 @@
+import '../store.css';
+import { motion } from "framer-motion"
+import { Link } from 'react-router-dom';
+import Eth from "./images/eth2.svg"
+import clock from "./images/clock.svg"
+import Logo from "./images/logo.gif"
+import HomeNFT from "./images/stolenNFT.png"
+import Item from './item';
 
+const ShoppingArea = () => {
+    return (
+        <div className="shop-Bg">
+            <motion.div
+                className='circle3'
+                animate={{ y: [0, 35, 0] }}
+                transition={{ repeat: Infinity, duration: 10 }}
+            >
 
-const ShoppingArea = () =>{
-    return(
-        <div>
-            <h1>Shopping Area</h1>
+            </motion.div>
+            <motion.div
+                className='circle4'
+                animate={{ y: [0, 35, 0] }}
+                transition={{ repeat: Infinity, duration: 10 }}
+            ></motion.div>
+            <div className='glass2'>
+                <div className='header2'>
+                    <div className='logoDiv'>
+                        <img className='logo' src={Logo} alt="" />
+                        <h1>ClosedSea</h1>
+                    </div>
+                    <Link to="/">  <a className='menuBtn' href="">Home</a> </Link>
+                    <Link to="/items"> <a className='menuBtn' href="">Shop</a></Link>
+                    <a className='menuBtn' href="">What are NFT's</a>
+                </div>
+                <div className='storeArea' >
+                <motion.div 
+                  className='icon2'
+                  animate={{ y: [0, 10, 0] }}
+                  transition={{ repeat: Infinity, duration: 0 }}
+                  >
+                    <div>
+                        <img className='nftImg' src={HomeNFT} alt="" />
+                    </div>
+                    <div className='nftInfo'>
+                      <h4>CloneX #17580</h4>
+                    </div>
+                    <div className='nftInfo2'>
+                    <p>Virtual fashion collective by RTFKT Studios. A clear homage to the CryptoPunks series </p>
+                    </div>
+                    <div className='nftEth'>
+                        <div className='nftEth2'>
+                        <img className= "nftEth-Img" src={Eth} alt="" />
+                        <span>44 Eth </span>
+                        </div> 
+                        <div className='nftEth2'>
+                        <img className= "nftEth-Img" src={clock} alt="" />
+                        <span>3 Days Left </span>
+                        </div> 
+                    </div>
+                  </motion.div>
+                  <Item/>
+                  <Item/>
+                  <Item/>
+                  <Item/>
+                  <Item/>
+                  <Item/>
+                  <Item/>
+                  <Item/>
+                  <Item/>
+                  <Item/>
+                </div>
+            </div>
         </div>
     )
 }
