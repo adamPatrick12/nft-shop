@@ -33,40 +33,6 @@ const ShoppingArea = () => {
                     <a className='menuBtn' href="">What are NFT's</a>
                 </div>
                 <div className='storeArea' >
-                <motion.div 
-                  className='icon2'
-                  animate={{ y: [0, 10, 0] }}
-                  transition={{ repeat: Infinity, duration: 0 }}
-                  >
-                    <div>
-                        <img className='nftImg' src={HomeNFT} alt="" />
-                    </div>
-                    <div className='nftInfo'>
-                      <h4>CloneX #17580</h4>
-                    </div>
-                    <div className='nftInfo2'>
-                    <p>Virtual fashion collective by RTFKT Studios. A clear homage to the CryptoPunks series </p>
-                    </div>
-                    <div className='nftEth'>
-                        <div className='nftEth2'>
-                        <img className= "nftEth-Img" src={Eth} alt="" />
-                        <span>44 Eth </span>
-                        </div> 
-                        <div className='nftEth2'>
-                        <img className= "nftEth-Img" src={clock} alt="" />
-                        <span>3 Days Left </span>
-                        </div> 
-                    </div>
-                  </motion.div>
-                  <Item/>
-                  <Item/>
-                  <Item/>
-                  <Item/>
-                  <Item/>
-                  <Item/>
-                  <Item/>
-                  <Item/>
-                  <Item/>
                   <Item/>
                 </div>
             </div>
