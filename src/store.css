@@ -64,7 +64,7 @@
     margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 
   .icon2 {
@@ -73,7 +73,7 @@
     height: 30rem;
     display: inline-block;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    margin: 25px 0 65px 10px;
+    margin: 25px 0 65px 40px;
     border-radius: 2rem;
     color: #fff;
     text-decoration: none;
@@ -178,4 +178,41 @@
 .AYO{
   width: 20rem;
   height: 20rem;
+}
+
+.spacing{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-left: 2rem;
+}
+
+.sideNav{
+  margin-top: 2rem;
+  width: 20rem;
+  height: 100rem;
+  background: linear-gradient(to right bottom, rgba(255,255,255,0.7),  rgba(255,255,255,0.3));
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shopContainer{
+  display: flex;
+  flex-direction: row;
+}
+
+h6{
+  font-size: 1.8rem;
+  font-family: 'Poppins', sans-serif;
+  color: #426696;
+  opacity: 0.8;
+}
+
+a{
+  font-size: 1.8rem;
+  font-family: 'Poppins', sans-serif;
+  color: gray;
+  opacity: 0.8;
 }

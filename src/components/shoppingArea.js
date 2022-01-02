@@ -32,9 +32,17 @@ const ShoppingArea = () => {
                     <Link to="/items"> <a className='menuBtn' href="">Shop</a></Link>
                     <a className='menuBtn' href="">What are NFT's</a>
                 </div>
-                <div className='storeArea' >
-                  <Item/>
+
+                <div className='shopContainer'>
+                     <div className='sideNav'>
+                        <h6>Browse Collections</h6>
+                        <a href=""> Punk</a>
+                     </div>
+                     <div className='storeArea' >
+                     <Item/>
+                    </div>
                 </div>
+                
             </div>
         </div>
     )

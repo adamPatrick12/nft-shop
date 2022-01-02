@@ -14,15 +14,21 @@ export default function Item() {
     getNFT()
   }, [])
   
+  
+  const options = {method: 'GET'};
+
+fetch('https://api.opensea.io/api/v1/collections?offset=0&limit=300', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+  
   const [png, setPng] = useState([])  
   
   async function getNFT() {
-    
-
-      
+ 
     try {
         const response = await fetch(
-          `https://api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=25&collection=doodles-official`,
+          `https://api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=20&collection=clonex`,
           { mode: 'cors' },
         );
         const nftData = await response.json();
@@ -73,7 +79,7 @@ const element2 =  <motion.div
   
   return (
     
-    <div>
+    <div className="spacing">
     
     {png.map(images => (
     <motion.div
