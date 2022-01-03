@@ -162,7 +162,7 @@
     align-items: center;
     font-family: 'Poppins', sans-serif;
     border: none;
-    margin-top: 10px;
+    margin-top: 20px;
     background: linear-gradient(to right bottom, rgba(255,255,255,0.8),  rgba(255,255,255,0.3));
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   }
@@ -175,27 +175,25 @@
   }
 
     
-.AYO{
-  width: 20rem;
-  height: 20rem;
-}
+
 
 .spacing{
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-evenly;
-  margin-left: 2rem;
+  border: green 1px solid;
 }
 
 .sideNav{
+  display: flex;
+  align-content: center;
+  flex-direction: column;
   margin-top: 2rem;
-  width: 20rem;
-  height: 100rem;
+  width: 22rem;
+  height: 30rem;
   background: linear-gradient(to right bottom, rgba(255,255,255,0.7),  rgba(255,255,255,0.3));
   border-radius: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .shopContainer{
@@ -208,6 +206,7 @@ h6{
   font-family: 'Poppins', sans-serif;
   color: #426696;
   opacity: 0.8;
+  text-align: center;
 }
 
 a{
@@ -215,4 +214,18 @@ a{
   font-family: 'Poppins', sans-serif;
   color: gray;
   opacity: 0.8;
+}
+
+.collectionBtn{
+  width: 7.5rem;
+    height: 2.2rem;
+    border-radius: 2rem;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.8),  rgba(255,255,255,0.3));
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    align-self: center;
 }

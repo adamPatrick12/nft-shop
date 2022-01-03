@@ -6,8 +6,14 @@ import clock from "./images/clock.svg"
 import Logo from "./images/logo.gif"
 import HomeNFT from "./images/stolenNFT.png"
 import Item from './item';
+import React, { useEffect, useState } from "react";
+import getNFT from './item';
 
 const ShoppingArea = () => {
+    
+   
+
+    
     return (
         <div className="shop-Bg">
             <motion.div
@@ -34,12 +40,8 @@ const ShoppingArea = () => {
                 </div>
 
                 <div className='shopContainer'>
-                     <div className='sideNav'>
-                        <h6>Browse Collections</h6>
-                        <a href=""> Punk</a>
-                     </div>
                      <div className='storeArea' >
-                     <Item/>
+                     <Item  />
                     </div>
                 </div>
                 
