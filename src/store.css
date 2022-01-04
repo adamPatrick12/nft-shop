@@ -10,7 +10,21 @@
   
   .shop-Bg{
     background: linear-gradient(180deg, #65dfc9, #2833ca, #6cdbeb);
-    
+    background-size: 600% 600%;
+  
+    -o-animation: AnimationName 59s ease infinite;
+    animation: AnimationName 59s ease infinite;
+  }
+
+  @-o-keyframes AnimationName {
+    0%{background-position:0% 2%}
+    50%{background-position:100% 99%}
+    100%{background-position:0% 2%}
+  }
+  @keyframes AnimationName {
+    0%{background-position:0% 2%}
+    50%{background-position:100% 99%}
+    100%{background-position:0% 2%}
   }
 
   .glass2{
@@ -55,6 +69,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.7),  rgba(255,255,255,0.3));
   }
 
   .storeArea{
@@ -73,7 +88,7 @@
     height: 30rem;
     display: inline-block;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    margin: 25px 0 65px 40px;
+    margin:65px 0 0px 40px;
     border-radius: 2rem;
     color: #fff;
     text-decoration: none;
@@ -83,20 +98,7 @@
     font-family: sans-serif;
   }
   
-  .icon2:nth-child(1) { background: hsla(129, 79%, 79%, 1);
   
-    background: linear-gradient(315deg, hsla(229, 79%, 79%, 1) 27%, hsla(186, 98%, 83%, 1) 60%);
-    
-    background: -moz-linear-gradient(315deg, hsla(229, 79%, 79%, 1) 27%, hsla(186, 98%, 83%, 1) 60%); }
-
-    .icon2:nth-child(2) {background: hsla(60, 70%, 71%, 1);
-
-      background: linear-gradient(135deg, hsla(60, 70%, 71%, 1) 7%, hsla(40, 75%, 42%, 1) 54%);
-      
-      background: -moz-linear-gradient(135deg, hsla(60, 70%, 71%, 1) 7%, hsla(40, 75%, 42%, 1) 54%);
-      
-      background: -webkit-linear-gradient(135deg, hsla(60, 70%, 71%, 1) 7%, hsla(40, 75%, 42%, 1) 54%);
-      }
 
   /**
    * The "shine" element
@@ -189,9 +191,9 @@
   display: flex;
   align-content: center;
   flex-direction: column;
-  margin-top: 2rem;
+  margin-left: 1rem;
   width: 22rem;
-  height: 30rem;
+  height: 35rem;
   background: linear-gradient(to right bottom, rgba(255,255,255,0.7),  rgba(255,255,255,0.3));
   border-radius: 2rem;
 }
@@ -217,7 +219,7 @@ a{
 }
 
 .collectionBtn{
-  width: 7.5rem;
+    width: 7.5rem;
     height: 2.2rem;
     border-radius: 2rem;
     align-items: center;
@@ -228,4 +230,66 @@ a{
     background: linear-gradient(to right bottom, rgba(255,255,255,0.8),  rgba(255,255,255,0.3));
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     align-self: center;
+}
+
+.absolutePos{
+  position: absolute;
+  top: 6%;
+  left: 15%;
+  width: 10rem;
+  height: 5rem;
+}
+
+.statsContainer{
+  width: 50rem;
+  height: 5rem;
+  position: relative;
+  top: -35%;
+  left: 200%;
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.statsBox{
+    width: 9.2rem;
+    height: 4.2rem;
+    border-radius: 2rem;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    background-color: #ffffff;
+    background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    align-self: center;
+    text-align: center;
+    color: #5583C0;
+}
+
+.strike {
+  width:100%;
+  height:1px;
+  background:black;
+}
+
+h5{
+  align-self: center;
+    text-align: center;
+    color: #5583C0;
+    font-size: 20px;
+    padding-top: 5px ;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    opacity: 0.8;
+}
+
+.EthLogo{
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  filter: invert(70%) sepia(5%) saturate(5523%) hue-rotate(185deg) brightness(86%) contrast(81%);
 }

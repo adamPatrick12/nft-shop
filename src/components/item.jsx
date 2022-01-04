@@ -2,59 +2,52 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion"
 import Eth from "./images/eth2.svg"
 import clock from "./images/clock.svg"
-import HomeNFT from "./images/stolenNFT.png"
 import '../store.css';
 import ShoppingCart from "./images/shopping.png"
-import Ape from "./images/BAYC.png"
 
 
 export default function Item() {
 
-  function randomPrice() {
-    console.log( Math.floor((Math.random() * 10) + 1));
-  }
 
   const [png, setPng] = useState([])
-
-  const [nftCollection, changeCollection] = useState("inbetweeners")
+  const [nftFloor, setFloorPrice] = useState()
+  const [nftOwners, setOwnerNum] = useState()
+  const [sevenDayVol, setSevenDayVol] = useState()
+  const [marketCap, setMarketCap] = useState()
+  const [nftCollection, changeCollection] = useState("morethangamersnftmtg")
 
   useEffect(() => {
     getNFT()
+    getCollectionStats()
   }, [nftCollection])
 
   function collectionChangeInbetweeners () {
-    getNFT() 
     changeCollection("inbetweeners") 
   }
   
   function collectionChangeCyphercity () {
-    getNFT() 
     changeCollection("cyphercity") 
   }
   
-  function collectionChangeMTG () {
-    getNFT() 
+  function collectionChangeMTG () {  
     changeCollection("morethangamersnftmtg") 
   }
   
   function collectionChangeCLONEX () {
-    getNFT() 
     changeCollection("clonex") 
   }
   
   function collectionChangeDoodles () {
-    getNFT() 
     changeCollection("doodles-official") 
   }
 
   function collectionChangeCoolCats () {
     const collect = "cool-cats-nft"
     changeCollection(collect)
-    getNFT()
+
   }
 
-  function collectionChangeShiba () {
-    getNFT() 
+  function collectionChangeShiba () {   
     changeCollection("shiba-social-club")
   }
 
@@ -67,20 +60,38 @@ export default function Item() {
       );
       const nftData = await response.json();
       const nftArr = nftData.assets
-      console.log(nftData)
+      console.log(nftArr)
       setPng(nftArr)
     } catch {
       console.log("ERROR")
     }
   }
 
+  async function getCollectionStats() {
+
+    try {
+      const response = await fetch(
+        `https://api.opensea.io/api/v1/collection/${nftCollection}`,
+        { mode: 'cors' },
+      );
+      const nftStats = await response.json();
+      console.log(nftStats)
+      const nftFloorPrice = nftStats.collection.stats.floor_price
+      setFloorPrice(nftFloorPrice)
+      const nftOwnerNumber = nftStats.collection.stats.num_owners
+      setOwnerNum(nftOwnerNumber)
+      const marketCap = nftStats.collection.stats.market_cap
+      setMarketCap(marketCap)
+      const sevenDay = nftStats.collection.stats.seven_day_volume
+      setSevenDayVol(sevenDay)
+    } catch {
+      console.log("ERROR")
+    }
+  }
+  
   
 
-
   return (
-
-
-
 
     <div className="spacing">
 
@@ -95,6 +106,38 @@ export default function Item() {
         <button className="collectionBtn" onClick={collectionChangeShiba} > Shiba</button>
 
       </div>
+
+      <div className="absolutePos">
+        <div className="statsContainer">
+          <div className="statsBox"> Floor Price
+            <div className="strike">
+            <img className="EthLogo" src={Eth} alt="" />
+              <h5>{nftFloor}</h5>  
+            </div>
+          </div>
+          <div className="statsBox"> Owners
+            <div className="strike">
+                <h5>{nftOwners}</h5>
+            </div>
+          </div>
+          <div className="statsBox"> Market Cap
+            <div className="strike">
+            <img className="EthLogo" src={Eth} alt="" />
+                <h5>{Math.round(marketCap)}</h5>
+            </div>
+          </div>
+          <div className="statsBox"> 7-Day Volume
+            <div className="strike">
+            <img className="EthLogo" src={Eth} alt="" />
+            <h5>{Math.round(sevenDayVol)}</h5>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+
 
       {png.map(images => (
         <motion.div
