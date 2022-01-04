@@ -14,15 +14,53 @@ export default function Item() {
   const [nftOwners, setOwnerNum] = useState()
   const [sevenDayVol, setSevenDayVol] = useState()
   const [marketCap, setMarketCap] = useState()
-  const [nftCollection, changeCollection] = useState("morethangamersnftmtg")
+  const [nftCollection, changeCollection] = useState("clonex")
 
   useEffect(() => {
     getNFT()
     getCollectionStats()
   }, [nftCollection])
 
+  
+  function collectionpWOW () {
+    changeCollection("world-of-women-nft") 
+  }
+  
+
+  function collectionpPudgypenguins () {
+    changeCollection("pudgypenguins") 
+  }
+  
+  function collectionChange0nForce () {
+    changeCollection("0n1-force") 
+  }
+  
+  function collectionChangePAG () {
+    changeCollection("chromie-squiggle-by-snowfro") 
+  }
+
+  function collectionChangeBAKC () {
+    changeCollection("bored-ape-kennel-club") 
+  }
+  
+  function collectionChangePunks () {
+    changeCollection("cryptopunks") 
+  }
+
+  function collectionChangeprimeapeplanetpap () {
+    changeCollection("primeapeplanetpap") 
+  }
+
+  function collectionChangemutantApeYachtClub () {
+    changeCollection("mutant-ape-yacht-club") 
+  }
+
   function collectionChangeInbetweeners () {
     changeCollection("inbetweeners") 
+  }
+
+  function collectionChangeBAYC() {
+    changeCollection("boredapeyachtclub") 
   }
   
   function collectionChangeCyphercity () {
@@ -55,12 +93,12 @@ export default function Item() {
 
     try {
       const response = await fetch(
-        `https://api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=19&collection=${nftCollection}`,
+        `https://api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=50&collection=${nftCollection}`,
         { mode: 'cors' },
       );
       const nftData = await response.json();
       const nftArr = nftData.assets
-      console.log(nftArr)
+      console.log(nftCollection)
       setPng(nftArr)
     } catch {
       console.log("ERROR")
@@ -91,20 +129,49 @@ export default function Item() {
   
   
 
+
   return (
 
     <div className="spacing">
 
       <div className='sideNav'>
         <h6>Browse Collections</h6>
-        <button className="collectionBtn" onClick={collectionChangeCLONEX} > CLONE X</button>
-        <button className="collectionBtn" onClick={collectionChangeCyphercity} > Cypher City</button>
-        <button className="collectionBtn" onClick={collectionChangeCoolCats} > Cool Cats</button>
-        <button className="collectionBtn" onClick={collectionChangeDoodles} > Doodles</button>
-        <button className="collectionBtn" onClick={collectionChangeInbetweeners} > Inbetweeners</button>
-        <button className="collectionBtn" onClick={collectionChangeMTG} > MTG</button>
-        <button className="collectionBtn" onClick={collectionChangeShiba} > Shiba</button>
-
+          <div className="collectionButtons">
+          <motion.button whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }} className="collectionBtn" onClick={collectionChangeBAYC} > BAYC</motion.button>
+          <motion.button whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }} className="collectionBtn" onClick={collectionChangeBAKC} > BAKC</motion.button>
+            <motion.button whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }} className="collectionBtn" onClick={collectionChangeCLONEX} > CLONE X</motion.button>
+            <motion.button whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }} className="collectionBtn" onClick={collectionChangeCyphercity} > Cypher City</motion.button>
+            <motion.button whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }} className="collectionBtn" onClick={collectionChangeCoolCats} > Cool Cats</motion.button>
+            <motion.button whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }} className="collectionBtn" onClick={collectionChange0nForce} >ON1 Force</motion.button>
+            <motion.button whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }} className="collectionBtn" onClick={collectionChangeDoodles} > Doodles</motion.button>
+            <motion.button whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }} className="collectionBtn" onClick={collectionChangeInbetweeners} > Inbetweeners</motion.button>
+            <motion.button whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }} className="collectionBtn" onClick={collectionChangemutantApeYachtClub} > MAYC</motion.button>
+            <motion.button whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }} className="collectionBtn" onClick={collectionChangeMTG} > MTG</motion.button>
+            <motion.button  whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }} className="collectionBtn" onClick={collectionChangeShiba} > Shiba</motion.button>
+            <motion.button  whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }} className="collectionBtn" onClick={collectionChangeprimeapeplanetpap} > PAP</motion.button>
+            <motion.button whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }} className="collectionBtn" onClick={collectionChangePunks} > Punks</motion.button>
+            <motion.button whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }} className="collectionBtn" onClick={collectionChangePAG} > Psychedelics</motion.button>
+            <motion.button whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }} className="collectionBtn" onClick={collectionpPudgypenguins} > Pudgy Penguins</motion.button>
+            <motion.button whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }} className="collectionBtn" onClick={collectionpWOW} > World of Woman</motion.button>
+         </div>
+     
+         
       </div>
 
       <div className="absolutePos">
@@ -162,7 +229,7 @@ export default function Item() {
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-             onClick= {(e) => {
+              onClick= {(e) => {
               e.preventDefault();
               window.location.href=(`${images.permalink} `);
               }}
