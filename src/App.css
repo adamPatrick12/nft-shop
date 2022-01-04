@@ -64,30 +64,29 @@
 }
 
 .header{
-  width: 60%;
+  width: 100%;
   min-height: 10vh;
-  border: 1px solid red;
   border-radius: 2rem;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
+
+
 
 .logoDiv{
   text-align: center;
+  margin-top: -2rem;
+  margin-left: 5rem;
 }
 
 .menuBtn{
-  font-size: 72px;
-  background: -webkit-linear-gradient(#65dfc9, #2833ca);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 70px;
+  color: #23538A;
   font-family: 'Poppins', sans-serif;
   font-size: medium;
-  transition: 0.3s;
   font-weight: 600;
-  opacity: 0.8;
-  transition: 0.3;
+  margin: 0;
 }
 
 .menuBtn:hover{
@@ -103,8 +102,14 @@
 }
 
 h1{
-  font-family: 'Poppins', sans-serif;
-  color: #5583c0;
+  font-family: 'Ubuntu', sans-serif;
+  background: #23538A;
+background: -webkit-linear-gradient(to bottom right, #23538A 40%, #A7CFDF 75%, #65DFC9 70%);
+background: -moz-linear-gradient(to bottom right, #23538A 40%, #A7CFDF 75%, #65DFC9 70%);
+background: linear-gradient(to bottom right, #23538A 40%, #A7CFDF 75%, #65DFC9 70%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+  
 }
 
 .pageInfo{
@@ -303,13 +308,13 @@ p{
   font-size: 0.8rem;
   line-height: 14px;
   color: rgb(243, 241, 241);
+  margin-top: 1px;
 }
 
 .nftEth{
   width: 23rem;
   height: 2rem;
   margin-left: -15px;
-  padding: 0;
   display: flex;
   align-content: center;
   justify-content: space-around;
@@ -325,11 +330,8 @@ p{
 }
 
 .nftEth2{
-  width: 7rem;
-  height: 2rem;
   display: flex;
   align-content: flex-start;
-  margin-bottom: 1rem;
   margin-left: 2px;
 }
 
@@ -338,7 +340,7 @@ span{
   text-align: start;
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 20px;
   margin-top: 20px;
   padding-top: 5px;

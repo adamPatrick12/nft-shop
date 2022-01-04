@@ -43,9 +43,12 @@ function Home() {
              <img className='logo' src={Logo} alt="" />
              <h1>ClosedSea</h1>
            </div>
-            <a  className='menuBtn' href="">Home</a>
-           <Link to = "/items"> <a  className='menuBtn' href="">Shop</a></Link> 
-            <a  className='menuBtn' href="">What are NFT's</a>
+              <div className='links'>
+                  <a  className='menuBtn' href="">Home</a>
+                <Link to = "/items"> <a  className='menuBtn' href="">Shop</a></Link> 
+                  <a  className='menuBtn' href="">What are NFT's</a>
+              </div>
+              
           </div>
           <div className='pageInfo'>
               <div className='infoBox1'>

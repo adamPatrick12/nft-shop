@@ -34,9 +34,12 @@ const ShoppingArea = () => {
                         <img className='logo' src={Logo} alt="" />
                         <h1>ClosedSea</h1>
                     </div>
-                    <Link to="/">  <a className='menuBtn' href="">Home</a> </Link>
-                    <Link to="/items"> <a className='menuBtn' href="">Shop</a></Link>
-                    <a className='menuBtn' href="">What are NFT's</a>
+                    <div className='links'>
+                        <Link to="/">  <a className='menuBtn' href="">Home</a> </Link>
+                        <Link to="/items"> <a className='menuBtn' href="">Shop</a></Link>
+                        <Link to="/items"> <a className='menuBtn' href="">What are NFTs</a></Link>
+                    </div>
+                    
                 </div>
 
                 <div className='shopContainer'>

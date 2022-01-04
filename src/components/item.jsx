@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion"
 import Eth from "./images/eth2.svg"
-import clock from "./images/clock.svg"
+import wallet from "./images/wallet.png"
 import '../store.css';
 import ShoppingCart from "./images/shopping.png"
 
@@ -14,6 +14,7 @@ export default function Item() {
   const [nftOwners, setOwnerNum] = useState()
   const [sevenDayVol, setSevenDayVol] = useState()
   const [marketCap, setMarketCap] = useState()
+  const [price, setPrice] = useState()
   const [nftCollection, changeCollection] = useState("clonex")
 
   useEffect(() => {
@@ -98,8 +99,8 @@ export default function Item() {
       );
       const nftData = await response.json();
       const nftArr = nftData.assets
-      console.log(nftCollection)
-      setPng(nftArr)
+      console.log(nftData)
+      setPng(nftArr.slice(1))   //Removing the first item form array since some collection give a null value on the first item
     } catch {
       console.log("ERROR")
     }
@@ -122,6 +123,8 @@ export default function Item() {
       setMarketCap(marketCap)
       const sevenDay = nftStats.collection.stats.seven_day_volume
       setSevenDayVol(sevenDay)
+      const avgPrice = nftStats.collection.stats.one_day_average_price
+      setPrice(avgPrice)
     } catch {
       console.log("ERROR")
     }
@@ -224,7 +227,7 @@ export default function Item() {
           <div className='nftEth'>
             <div className='nftEth2'>
               <img className="nftEth-Img" src={Eth} alt="" />
-              <span>{Math.floor((Math.random() * 100) + 1)} Eth </span>
+              <span>{Math.round(price * 100) / 100} Eth </span>
             </div>
             <motion.button
               whileHover={{ scale: 1.1 }}
@@ -237,8 +240,13 @@ export default function Item() {
               <img className="shoppingCart" src={ShoppingCart} alt="" />
             </motion.button>
             <div className='nftEth2'>
-              <img className="nftEth-Img" src={clock} alt="" />
-              <span>{Math.floor((Math.random() * 10) + 1)} Days</span>
+              <motion.button  
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="walletBtn"  onClick= {(e) => {
+              e.preventDefault();
+              window.open(`https://etherscan.io/address/${images.owner.address}`);
+              }}>   <img className="wallet" src={wallet} alt="" /> </motion.button>
             </div>
           </div>
         </motion.div>
