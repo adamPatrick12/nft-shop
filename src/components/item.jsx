@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion"
 import Eth from "./images/eth2.svg"
+import User from "./images/user.png"
 import wallet from "./images/wallet.png"
 import '../store.css';
 import ShoppingCart from "./images/shopping.png"
@@ -8,6 +9,7 @@ import ShoppingCart from "./images/shopping.png"
 
 export default function Item() {
 
+  let internationalNumberFormat = new Intl.NumberFormat('en-US')
 
   const [png, setPng] = useState([])
   const [nftFloor, setFloorPrice] = useState()
@@ -181,25 +183,26 @@ export default function Item() {
         <div className="statsContainer">
           <div className="statsBox"> Floor Price
             <div className="strike">
-            <img className="EthLogo" src={Eth} alt="" />
+            <img className="EthLogo" src={Eth} alt="" /> 
               <h5>{nftFloor}</h5>  
             </div>
           </div>
           <div className="statsBox"> Owners
             <div className="strike">
-                <h5>{nftOwners}</h5>
+            <img className="EthLogo" src={User} alt="" /> 
+                <h5>{internationalNumberFormat.format(nftOwners)}</h5>
             </div>
           </div>
           <div className="statsBox"> Market Cap
             <div className="strike">
             <img className="EthLogo" src={Eth} alt="" />
-                <h5>{Math.round(marketCap)}</h5>
+                <h5>{internationalNumberFormat.format((Math.round(marketCap)))}</h5>
             </div>
           </div>
           <div className="statsBox"> 7-Day Volume
             <div className="strike">
             <img className="EthLogo" src={Eth} alt="" />
-            <h5>{Math.round(sevenDayVol)}</h5>
+            <h5>{internationalNumberFormat.format((Math.round(sevenDayVol)))}</h5>
             </div>
           </div>
           
@@ -234,7 +237,7 @@ export default function Item() {
               whileTap={{ scale: 0.9 }}
               onClick= {(e) => {
               e.preventDefault();
-              window.location.href=(`${images.permalink} `);
+              window.open(`${images.permalink} `);
               }}
               className="buyBtn"> BUY
               <img className="shoppingCart" src={ShoppingCart} alt="" />

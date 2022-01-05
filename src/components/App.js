@@ -3,20 +3,13 @@ import '../App.css';
 import { Link } from 'react-router-dom';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Button from '@mui/material/Button';
 import {motion} from "framer-motion"
 import HomeNFT from "./images/stolenNFT.png"
 import Eth from "./images/eth2.svg"
 import clock from "./images/clock.svg"
 import Logo from "./images/logo.gif"
 
-const theme = createTheme({
-  typography: {
-    fontFamily: [
-      'Arial' 
-    ].join(','),
-  },
-});
+
 
 function Home() {
   
@@ -44,9 +37,9 @@ function Home() {
              <h1>ClosedSea</h1>
            </div>
               <div className='links'>
-                  <a  className='menuBtn' href="">Home</a>
-                <Link to = "/items"> <a  className='menuBtn' href="">Shop</a></Link> 
-                  <a  className='menuBtn' href="">What are NFT's</a>
+                  <Link to = "/"> <a  className='menuBtn' href="">Home</a></Link> 
+                  <Link to = "/items"> <a  className='menuBtn' href="">Shop</a></Link> 
+                   <a className='NFTLink' target="_blank" href="https://twitter.com/visualizevalue/status/1476175140174057472?s=21">What are NFTs</a>
               </div>
               
           </div>
