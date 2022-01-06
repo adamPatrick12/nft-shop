@@ -37,7 +37,7 @@ const ShoppingArea = () => {
                     <div className='links'>
                         <Link to="/">  <a className='menuBtn' href="">Home</a> </Link>
                         <Link to="/items"> <a className='menuBtn' href="">Shop</a></Link>
-                       <Link to="/items"> <a className='NFTLink' href="">What Are Nfts</a></Link>
+                        <a className='NFTLink2' target="_blank" href="https://twitter.com/visualizevalue/status/1476175140174057472?s=21">What are NFTs</a>
                     </div>
                     
                 </div>

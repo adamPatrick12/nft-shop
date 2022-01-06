@@ -6,6 +6,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import {motion} from "framer-motion"
 import HomeNFT from "./images/stolenNFT.png"
 import Eth from "./images/eth2.svg"
+import Info from "./images/info.png"
 import clock from "./images/clock.svg"
 import Logo from "./images/logo.gif"
 
@@ -13,6 +14,18 @@ import Logo from "./images/logo.gif"
 
 function Home() {
   
+  function displaypopup()
+  {
+      var popup = document.querySelector('.hover_bkgr_fricc');
+       popup.style.display = 'block';
+  }
+  
+  function removePopOut()
+  {
+      var popupBtn = document.querySelector('.hover_bkgr_fricc');
+      popupBtn.style.display = 'none';
+  }
+
   
   return (
     <div className="Home-BG">
@@ -33,6 +46,11 @@ function Home() {
       <div className='glass'>
           <div className='header'>    
            <div className='logoDiv'>
+           <motion.button 
+                className='InfoBtn' 
+                whileHover={{ scale: 1.1 }}
+                onClick={displaypopup}
+                ><img src={Info} className='InfoImg' alt="" /></motion.button>
              <img className='logo' src={Logo} alt="" />
              <h1>ClosedSea</h1>
            </div>
@@ -48,21 +66,7 @@ function Home() {
                   <h2>
                       ClosedSea - The online marketplace to Discover, collect, and sell NFTs
                   </h2>
-              </div>
-              <div className='infoBox2'>
-                 <h3>
-                     ClosedSea is the world's first and largest fake NFT marketplace! Why buy NFTs with your hard earned cash when, you can just screenshot them!  
-                 </h3>
-                
-                <Link to= "/items">
-                <motion.button 
-                className='shopBtn' 
-                whileHover={{ scale: 1.1 }}
-                >Shop NFTs</motion.button>
-                </Link>
-
-              </div>
-              <div className = "nftContainer" >
+                  <div className = "nftContainer" >
                   <motion.div 
                   className='icon'
                   animate={{ y: [0, 35, 0] }}
@@ -89,10 +93,34 @@ function Home() {
                     </div>
                   </motion.div>
               </div>
+
+              </div>
+              <div className='infoBox2'>
+                 <h3>
+                     ClosedSea is the world's first and largest fake NFT marketplace! Why buy NFTs with your hard earned cash when, you can just screenshot them!  
+                 </h3>
+                
+                <Link to= "/items">
+                <motion.button 
+                className='shopBtn' 
+                whileHover={{ scale: 1.1 }}
+                >Shop NFTs</motion.button>
+                </Link>
+
+              </div>
+             
           </div>
           
           
       </div>
+
+      <div class="hover_bkgr_fricc">
+                    <span class="helper"></span>
+                    <div>
+                        <div onClick={removePopOut} class="popupCloseButton">&times;</div>
+                        <p className='text'>If the page looks to zoomed in/out adjust your screen size (Command/CTRL +/-) </p>
+                    </div>
+                </div>
 
     </div>
     

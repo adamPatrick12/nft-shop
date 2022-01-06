@@ -25,10 +25,17 @@ export default function Item() {
   }, [nftCollection])
 
   
+  function collectionAlienFriends () {
+    changeCollection("alienfrensnft") 
+  }
+
+  function collectionpbear () {
+    changeCollection("phantabear") 
+  }
+
   function collectionpWOW () {
     changeCollection("world-of-women-nft") 
   }
-  
 
   function collectionpPudgypenguins () {
     changeCollection("pudgypenguins") 
@@ -143,6 +150,8 @@ export default function Item() {
         <h6>Browse Collections</h6>
           <div className="collectionButtons">
           <motion.button whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }} className="collectionBtn" onClick={collectionAlienFriends} > Alien Friends</motion.button>
+          <motion.button whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }} className="collectionBtn" onClick={collectionChangeBAYC} > BAYC</motion.button>
           <motion.button whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }} className="collectionBtn" onClick={collectionChangeBAKC} > BAKC</motion.button>
@@ -166,6 +175,8 @@ export default function Item() {
               whileTap={{ scale: 0.9 }} className="collectionBtn" onClick={collectionChangeShiba} > Shiba</motion.button>
             <motion.button  whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }} className="collectionBtn" onClick={collectionChangeprimeapeplanetpap} > PAP</motion.button>
+               <motion.button  whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }} className="collectionBtn" onClick={collectionpbear} > Phanta Bear</motion.button>
             <motion.button whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }} className="collectionBtn" onClick={collectionChangePunks} > Punks</motion.button>
             <motion.button whileHover={{ scale: 1.1 }}

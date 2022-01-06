@@ -32,8 +32,8 @@
 
 .glass{
   background: white;
-  min-height: 85vh;
-  width: 70%;
+  min-height: 75vh;
+  width: 60%;
   background: linear-gradient(to right bottom, rgba(255,255,255,0.7),  rgba(255,255,255,0.3));
   border-radius: 2rem;
   z-index: 2;
@@ -88,6 +88,7 @@
   font-weight: 600;
   margin: 0;
   text-decoration: none;
+  z-index: 2;
 }
 
 .NFTLink{
@@ -97,7 +98,15 @@
   font-size: medium;
   font-weight: 600;
   margin-top: 11px;
-  text-decoration: none;
+}
+
+.NFTLink2{
+  font-size: 70px;
+  color: #23538A;
+  font-family: 'Poppins', sans-serif;
+  font-size: medium;
+  font-weight: 600;
+  margin-top: 14px;
 }
 
 .NFTLink:hover{
@@ -132,17 +141,19 @@ background: linear-gradient(to bottom right, #23538A 40%, #A7CFDF 75%, #65DFC9 7
 .pageInfo{
   height: 40rem;
   width: 50rem;
-  
   margin-top: 1.5rem;
   margin-left: 7.3rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .infoBox1{
   height: 17rem;
-  width: 45rem;
-  
+  width: 65rem;
   font-size: large;
   margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
 }
 
 h2{
@@ -193,10 +204,7 @@ h3{
 }
 
 .nftCard{
-height: 30rem;
-width: 22rem;
-position: absolute;
-left: 620%;
+
 border-radius: 2rem;
 display: flex;
 justify-content: center;
@@ -206,8 +214,8 @@ box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .icon {
-  position: absolute;
-  left: 600%;
+  position: relative;
+  top: 150%;
   overflow: hidden;
   width: 22rem;
   height: 30rem;
@@ -229,54 +237,6 @@ box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   
   background: -moz-linear-gradient(315deg, hsla(229, 79%, 79%, 1) 27%, hsla(186, 98%, 83%, 1) 60%); }
 
-.icon:after {
-  
-  animation: shine 5s ease-in-out  infinite;
-  animation-fill-mode: forwards;  
-  content: "";
-  position: absolute;
-  top: -110%;
-  left: -210%;
-  width: 200%;
-  height: 200%;
-  opacity: 0;
-  transform: rotate(30deg);
-  
-  background: rgba(255, 255, 255, 0.13);
-  background: linear-gradient(
-    to right, 
-    rgba(255, 255, 255, 0.13) 0%,
-    rgba(255, 255, 255, 0.13) 77%,
-    rgba(255, 255, 255, 0.5) 92%,
-    rgba(255, 255, 255, 0.0) 100%
-  );
-}
-
-/* Hover state - trigger effect */
-
-
-/* Active state */
-
-.icon:active:after {
-  opacity: 0;
-}
-
-@keyframes shine{
-  10% {
-    opacity: 1;
-    top: -30%;
-    left: -30%;
-    transition-property: left, top, opacity;
-    transition-duration: 0.7s, 0.7s, 0.15s;
-    transition-timing-function: ease;
-  }
-  100% {
-    opacity: 0;
-    top: -30%;
-    left: -30%;
-    transition-property: left, top, opacity;
-  }
-}
 
 .nftContainer{
   position: relative;
@@ -364,3 +324,93 @@ span{
   margin-left: 8px;
 }
 
+
+.hover_bkgr_fricc{
+  background:rgba(0,0,0,.4);
+  cursor:pointer;
+  display:none;
+  height:100%;
+  position:fixed;
+  text-align:center;
+  top:0;
+  width:100%;
+  z-index:10000;
+}
+.hover_bkgr_fricc .helper{
+  display:inline-block;
+  height:100%;
+  vertical-align:middle;
+}
+.hover_bkgr_fricc > div {
+  background: linear-gradient(to right bottom, rgba(255,255,255,0.7),  rgba(255,255,255,0.3));
+  box-shadow: 10px 10px 60px #555;
+  display: inline-block;
+  height: auto;
+  max-width: 551px;
+  min-height: 100px;
+  vertical-align: middle;
+  width: 60%;
+  position: relative;
+  border-radius: 8px;
+  padding: 15px 5%;
+  border: black 2px solid
+}
+.popupCloseButton {
+  background-color: #fff;
+  border: 3px solid #999;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: arial;
+  font-weight: bold;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 25px;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+.popupCloseButton:hover {
+  background-color: #ccc;
+}
+.trigger_popup_fricc {
+  cursor: pointer;
+  font-size: 20px;
+  display: inline-block;
+  font-weight: bold;
+  margin-left: 20rem;
+  background-color: #ED184B;
+  color: white;
+  width: 8rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 3px;
+  border: black 2px solid;
+}
+
+.trigger_popup_fricc:hover{
+  border: white 2px solid;
+}
+
+.InfoBtn{
+  background: none;
+  width: 1rem;
+  border:none;
+  height: 1rem;
+  border-radius: 2rem;
+  font-weight: 300;
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+}
+
+.InfoImg{
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.text{
+  color: black;
+  margin-top: 1rem;
+}
