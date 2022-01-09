@@ -1,8 +1,6 @@
 import * as React from 'react';
 import '../App.css';
 import { Link } from 'react-router-dom';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import {motion} from "framer-motion"
 import HomeNFT from "./images/stolenNFT.png"
 import Eth from "./images/eth2.svg"

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion"
 import Eth from "./images/eth2.svg"
 import User from "./images/user.png"
+import Button from '@mui/material/Button';
 import wallet from "./images/wallet.png"
 import '../store.css';
 import ShoppingCart from "./images/shopping.png"
