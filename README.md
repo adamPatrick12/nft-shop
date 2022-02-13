@@ -17,4 +17,4 @@
 
 ### Live Version 
 
-https://apatrick.me/nft-shop/#/
+https://adampatrick12.github.io/nft-shop/#/
