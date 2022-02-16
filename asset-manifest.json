@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/nft-shop/static/css/main.fd4f1c73.css",
-    "main.js": "/nft-shop/static/js/main.d306d58f.js",
+    "main.css": "/nft-shop/static/css/main.a744498a.css",
+    "main.js": "/nft-shop/static/js/main.e451e4e3.js",
     "static/media/stolenNFT.png": "/nft-shop/static/media/stolenNFT.359b73afe7529265c894.png",
     "static/media/logo.gif": "/nft-shop/static/media/logo.7950acd89ab2bd6d0705.gif",
     "static/media/shopping.png": "/nft-shop/static/media/shopping.0b51be8d0b88349419af.png",
     "index.html": "/nft-shop/index.html",
     "static/media/clock.svg": "/nft-shop/static/media/clock.b5e973f67f4e7bbb8c90ca06fdc606c3.svg",
     "static/media/eth2.svg": "/nft-shop/static/media/eth2.cf8aa5e7c7ee6fe226057d2329059293.svg",
-    "main.fd4f1c73.css.map": "/nft-shop/static/css/main.fd4f1c73.css.map",
-    "main.d306d58f.js.map": "/nft-shop/static/js/main.d306d58f.js.map"
+    "main.a744498a.css.map": "/nft-shop/static/css/main.a744498a.css.map",
+    "main.e451e4e3.js.map": "/nft-shop/static/js/main.e451e4e3.js.map"
   },
   "entrypoints": [
-    "static/css/main.fd4f1c73.css",
-    "static/js/main.d306d58f.js"
+    "static/css/main.a744498a.css",
+    "static/js/main.e451e4e3.js"
   ]
 }
