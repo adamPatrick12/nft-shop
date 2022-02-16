@@ -101,21 +101,23 @@ export default function Item() {
   }
 
   async function getNFT() {
-
+    
     try {
       const response = await fetch(
-        `https://api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=50&collection=${nftCollection}`,
-        { mode: 'cors' },
+        `https://api.opensea.io/api/v1/assets?limit=45&collection=${nftCollection}`,
+        { mode: 'cors',
+         credentials: 'include',
+        orgin: 'true'}
       );
       const nftData = await response.json();
       const nftArr = nftData.assets
       console.log(nftData)
-      setPng(nftArr.slice(1))   //Removing the first item form array since some collection give a null value on the first item
+      setPng(nftArr.slice(6,15))   //Removing the first item form array since some collections give a null value on the first item
     } catch {
       console.log("ERROR")
     }
   }
-
+  
   async function getCollectionStats() {
 
     try {
